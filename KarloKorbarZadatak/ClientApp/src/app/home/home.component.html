@@ -1,0 +1,31 @@
+<h1 id="tableLabel">Person list</h1>
+
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque elementum dolor in velit posuere, eget tempus nibh eleifend. Etiam maximus tellus at dolor molestie fringilla. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</p>
+
+
+<button class="btn btn-primary mx-1" (click)="get()">ucitaj podatke</button>
+<button class="btn btn-secondary mx-1" (click)="post()">spremi podatke</button>
+
+<p *ngIf="!forecasts"><em>Loading...</em></p>
+
+  <table class='table table-striped' aria-labelledby="tableLabel" *ngIf="forecasts">
+    <thead>
+      <tr>
+        <th>Ime</th>
+        <th>Prezime</th>
+        <th>Poštanski br.</th>
+        <th>Grad</th>
+        <th>Telefon</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let forecast of forecasts">
+        <td>{{ forecast.ime }}</td>
+        <td>{{ forecast.prezime }}</td>
+        <td>{{ forecast.grad }}</td>
+        <td [ngStyle]="{color: validate(forecast.postanskiBr)?null:'red'}">{{ forecast.postanskiBr }}</td>
+        <td>{{ forecast.telefon }}</td>
+      </tr>
+    </tbody>
+  </table>
+

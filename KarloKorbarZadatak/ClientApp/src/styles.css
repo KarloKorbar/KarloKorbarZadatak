@@ -1,0 +1,41 @@
+/* You can add global styles to this file, and also import other style files */
+
+/* Provide sufficient contrast against white background */
+/*some colors i picked output just in case i want something custom*/
+:root {
+  --white: #f2f2f7;
+  --dark-gray: #2e374b;
+  --blue: #1b6ec2;
+  --green: #5f9b92;
+}
+
+a {
+  color: #0366d6;
+}
+
+code {
+  color: #e01a76;
+}
+
+/*.btn-primary {
+  color: var(--white);
+  background-color: var(--blue);
+  border-color: var(--white);
+}
+.btn-primary:hover {
+  color: var(--white);
+  background-color: var(--blue);
+  border-color: var(--dark-gray);
+}
+
+.btn-secondary {
+  color: var(--white);
+  background-color: var(--green); 
+  border-color: var(--white);
+}
+.btn-secondary:hover {
+  color: var(--white);
+  background-color: var(--green);
+  border-color: var(--dark-gray);
+}*/
+
